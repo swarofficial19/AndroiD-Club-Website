@@ -1,0 +1,6 @@
+{
+  "name": "Android Club - Official Showcase Website",
+  "description": "The official showcase website for the college Android Development Club featuring projects, domains, events, team, and community engagement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

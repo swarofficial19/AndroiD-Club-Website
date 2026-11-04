@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --color-brand-bg: #000000;
+  --color-brand-surface-1: #0A0D0B;
+  --color-brand-surface-2: #101512;
+  --color-brand-surface-3: #161D18;
+  --color-brand-neon-green: #00FF87;
+  --color-brand-android: #3DDC84;
+  --color-brand-emerald: #10B981;
+}
+
+:root {
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #000000;
+  color: #F8FAFC;
+  overflow-x: hidden;
+}
+
+code, pre, kbd, samp, .font-mono {
+  font-family: 'JetBrains Mono', 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom Green Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #142017;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3DDC84;
+}
+
+/* Subtle tech green grid pattern */
+.bg-tech-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(61, 220, 132, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(61, 220, 132, 0.04) 1px, transparent 1px);
+}
+
+.bg-radial-mesh {
+  background: 
+    radial-gradient(circle at 20% 15%, rgba(61, 220, 132, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(0, 255, 135, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.1) 0%, transparent 55%);
+}
+
+/* Glassmorphism Black & Green panels */
+.glass-panel {
+  background-color: rgba(10, 13, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(61, 220, 132, 0.15);
+}
+
+.glass-panel-elevated {
+  background-color: rgba(16, 21, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(61, 220, 132, 0.25);
+}
+
+.glass-nav {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(61, 220, 132, 0.15);
+}
+
+/* Soft glowing green cards */
+.glow-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(61, 220, 132, 0.12);
+  background-color: #0A0D0B;
+}
+
+.glow-card:hover {
+  border-color: rgba(61, 220, 132, 0.45);
+  box-shadow: 0 12px 35px -10px rgba(61, 220, 132, 0.22), 0 0 20px -3px rgba(0, 255, 135, 0.15);
+}
+
+/* Green Tech Badge */
+.tech-badge {
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background-color: rgba(61, 220, 132, 0.05);
+  border: 1px solid rgba(61, 220, 132, 0.2);
+  color: #3DDC84;
+  transition: all 0.15s ease;
+}
+
+.tech-badge:hover {
+  border-color: #00FF87;
+  color: #00FF87;
+  background-color: rgba(0, 255, 135, 0.1);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
